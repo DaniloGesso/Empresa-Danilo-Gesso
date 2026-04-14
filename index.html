@@ -9,41 +9,53 @@
 
 <body>
 
-<!-- LOGO -->
-<header class="topo">
+<header>
     <img src="img/logo.png" class="logo">
+    <h1>Danilo Gesso</h1>
+    <p>Qualidade que transforma seu ambiente</p>
 </header>
 
-<!-- CAPA -->
 <section class="hero">
-    <h1>Danilo Gesso</h1>
-    <p class="slogan">Qualidade que transforma seu ambiente</p>
-
-    <h2 class="garantia">✔ Garantia de até 6 meses</h2>
-
-    <a href="servicos.html" class="btn">Ver nossos serviços</a>
+    <h2>Garantia de até 6 meses</h2>
+    <p>Acabamento profissional e confiança</p>
+    <button onclick="irServicos()">Ver nossos serviços</button>
 </section>
 
-<!-- SOBRE -->
 <section class="info">
-    <h2>Bem-vindo!</h2>
-    <p>Trabalhamos com serviços de gesso profissional, oferecendo acabamento de alta qualidade, rapidez e confiança.</p>
-
-    <p>📞 (62)991889486 </p>
+    <h2>Bem-vindo</h2>
+    <p>Especialistas em gesso com acabamento profissional.</p>
+    <p>📞 (62) 991889486</p>
     <p>📧 danilogessocomqualidade@gmail.com</p>
 </section>
 
-<!-- BOTÃO WHATSAPP -->
-<div class="whatsapp" onclick="abrirOpcoes()">💬</div>
-
-<!-- AVALIAÇÃO -->
-<section class="avaliacao">
+<section class="avaliacoes">
     <h2>Avalie nosso serviço</h2>
-    <textarea placeholder="Digite sua avaliação..."></textarea>
+    <textarea id="avaliacaoTexto"></textarea><br><br>
     <button onclick="enviarAvaliacao()">Enviar</button>
+    <div id="listaAvaliacoes"></div>
 </section>
 
-<script src="script.js"></script>
+<div class="orcamento">
+    <button onclick="abrirOpcoes()">Solicitar orçamento</button>
+</div>
 
+<div id="modal" class="modal">
+    <div class="modal-box">
+        <h3>Escolha o serviço</h3>
+        <select id="servico">
+            <option>Rebaixamento</option>
+            <option>Forro</option>
+            <option>Gesso</option>
+            <option>Molduras</option>
+            <option>Cortineiras</option>
+            <option>Sancas</option>
+            <option>Divisórias</option>
+            <option>Reparos</option>
+        </select>
+        <button onclick="enviarWhats()">Continuar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
